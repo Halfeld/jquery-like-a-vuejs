@@ -26,7 +26,8 @@
    * Add events
    */
   const addEventListeners = () => {
-    $('#search').on('click', async () => {
+
+    const search = async () => {
       console.log('* Starting search..')
 
       const {
@@ -46,6 +47,13 @@
         gifFormated.map(({ small }) => render(small))
       } catch (responseError) {
         console.log('* Ohh something happen..', responseError)
+      }
+    }
+
+    $('#search').on('click', search)
+    $('#q').on('keyup', (event) => {
+      if (event.key === 'Enter') {
+        search()
       }
     })
   }
