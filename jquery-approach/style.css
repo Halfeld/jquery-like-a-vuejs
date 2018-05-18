@@ -40,6 +40,9 @@ body {
 @media all and (max-width: 680px) {
   .container .container-article { width: 90%; }
 }
+@media all and (max-width: 450px) {
+  .container .container-article { justify-content: center; }
+}
 
 /* components rules */
 .app-title {
