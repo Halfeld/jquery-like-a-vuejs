@@ -55,7 +55,7 @@ body {
 }
 .app-title::after {
   position: absolute;
-  content: "with Vue.js :(";
+  content: "with Vue.js :)";
   background-color: #6195FF;
   border-radius: 4px;
   color: #fff;
