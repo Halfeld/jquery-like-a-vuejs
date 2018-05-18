@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js Giphy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <section class="container" id="app">
+    <h1 class="app-title">Caqui<span>Coders</span></h1>
+    <header class="container-header">
+
+      <!-- Searchbar -->
+      <div class="searchbar">
+        <input
+          placeholder="Search something stupid..."
+          type="text"
+          class="searchbar--input"
+          id="q">
+        <button class="searchbar--button" id="search">Search</button>
+        <select class="searchbar--limit" id="limit">
+          <option value="5">05 gifs</option>
+          <option value="10">10 gifs</option>
+          <option value="15">15 gifs</option>
+          <option value="20">20 gifs</option>
+        </select>
+      </div>
+
+    </header>
+
+    <article class="container-article" id="target">
+    </article>
+  </section>
+
+  <script src="vue.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
