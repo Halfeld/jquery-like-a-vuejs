@@ -46,11 +46,25 @@ body {
 
 /* components rules */
 .app-title {
+  position: relative;
   color: #6195FF;
   font-size: 3rem;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+.app-title::after {
+  position: absolute;
+  content: "with Vue.js :(";
+  background-color: #6195FF;
+  border-radius: 4px;
+  color: #fff;
+  font-size: .9rem;
+  text-transform: none;
+  padding: 5px;
+  top: 40px;
+  right: -36px;
+  transform: rotate(-10deg)
 }
 .app-title > span { font-weight: 800; }
 @media all and (max-width: 680px) {
