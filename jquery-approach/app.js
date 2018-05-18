@@ -67,8 +67,8 @@
         src="${url}"
         width="${width}"
         height="${height}" 
-        class="gif">
-      </img>
+        class="gif"
+      />
     `
     $('#target').append(html)
   }

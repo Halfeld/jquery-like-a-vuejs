@@ -19,9 +19,10 @@
           placeholder="Search something stupid..."
           type="text"
           class="searchbar--input"
-          id="q">
-        <button class="searchbar--button" id="search">Search</button>
-        <select class="searchbar--limit" id="limit">
+          v-model="q"
+          @keyup.enter="search">
+        <button class="searchbar--button" @click="search">Search</button>
+        <select class="searchbar--limit" v-model="limit">
           <option value="5">05 gifs</option>
           <option value="10">10 gifs</option>
           <option value="15">15 gifs</option>
@@ -31,10 +32,18 @@
 
     </header>
 
-    <article class="container-article" id="target">
+    <article class="container-article">
+      <img
+        v-for="gif in gifs"
+        :src="gif.url"
+        :width="gif.width"
+        :height="gif.height"
+        class="gif"
+      />
     </article>
   </section>
 
+  <script src="axios.min.js"></script>
   <script src="vue.min.js"></script>
   <script src="app.js"></script>
 </body>
